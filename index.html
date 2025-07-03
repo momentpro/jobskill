@@ -5,147 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[더큐브 그룹] 분양상담사 채용 세미나</title>
     <style>
-        /* 웹 폰트 Pretenard 적용 (선택 사항) */
+        /* CSS 스타일은 이전과 동일합니다. */
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f0f2f5; /* 캔버스 배경색 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            margin: 0;
-        }
-        .form-wrapper {
-            max-width: 680px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            overflow: hidden; /* 헤더의 둥근 모서리를 위해 */
-        }
-        .form-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 40px;
-        }
-        .form-header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 700;
-        }
-        .form-header p {
-            margin: 10px 0 0;
-            opacity: 0.9;
-            font-size: 16px;
-        }
-        .form-body {
-            padding: 30px 40px;
-        }
-        .form-description {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 25px;
-        }
-        .form-group {
-            margin-bottom: 25px;
-        }
-        .form-group label, .form-group .question-title {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 16px;
-            color: #333;
-        }
-        .required-star {
-            color: #e74c3c;
-            margin-left: 3px;
-        }
-        .form-group input[type="text"], .form-group input[type="tel"] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-size: 15px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .form-group input[type="text"]:focus, .form-group input[type="tel"]:focus {
-            border-color: #667eea;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-        }
-        .radio-option {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-        }
-        .radio-option label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            font-weight: 500;
-            margin: 0;
-        }
-        .radio-option input[type="radio"] {
-            margin-right: 12px;
-            width: 18px;
-            height: 18px;
-            accent-color: #667eea; /* 라디오 버튼 선택 시 색상 */
-        }
-        .privacy-info {
-            font-size: 13px;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            color: #666;
-            margin-bottom: 10px;
-            border: 1px solid #eee;
-            line-height: 1.6;
-        }
-        .submit-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .submit-btn:hover {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transform: translateY(-2px);
-        }
+        body{font-family:'Pretendard',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background-color:#f0f2f5;display:flex;justify-content:center;align-items:center;padding:40px;margin:0}
+        .form-wrapper{max-width:680px;width:100%;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.1);overflow:hidden}
+        .form-header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:30px 40px}
+        .form-header h1{margin:0;font-size:28px;font-weight:700}
+        .form-header p{margin:10px 0 0;opacity:.9;font-size:16px}
+        .form-body{padding:30px 40px}
+        .form-description{margin-bottom:30px;font-size:16px;line-height:1.8;color:#444}
+        .form-description p{margin-bottom:16px}
+        .form-description .highlight{padding:15px;background-color:#f9f9f9;border-radius:8px;font-weight:500;margin-top:20px}
+        .form-group{margin-bottom:25px}
+        .form-group label,.form-group .question-title{display:block;font-weight:600;margin-bottom:8px;font-size:16px;color:#333}
+        .required-star{color:#e74c3c;margin-left:3px}
+        .form-group input[type=text],.form-group input[type=tel]{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;box-sizing:border-box;font-size:15px;transition:border-color .3s,box-shadow .3s}
+        .form-group input[type=text]:focus,.form-group input[type=tel]:focus{border-color:#667eea;outline:0;box-shadow:0 0 0 3px rgba(102,126,234,.2)}
+        .radio-option{background:#f9f9f9;padding:15px;border-radius:8px;border:1px solid #eee}
+        .radio-option label{display:flex;align-items:center;cursor:pointer;font-weight:500;margin:0}
+        .radio-option input[type=radio]{margin-right:12px;width:18px;height:18px;accent-color:#667eea}
+        .privacy-info{font-size:13px;background-color:#f9f9f9;padding:15px;border-radius:8px;color:#666;margin-bottom:10px;border:1px solid #eee;line-height:1.6}
+        .submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border:none;border-radius:8px;font-size:18px;font-weight:700;cursor:pointer;transition:transform .2s,box-shadow .2s}
+        .submit-btn:hover{box-shadow:0 4px 15px rgba(0,0,0,.2);transform:translateY(-2px)}
+        .submit-btn:disabled{background:#ccc;cursor:not-allowed}
     </style>
 </head>
 <body>
     <div class="form-wrapper">
         <div class="form-header">
-            <h1>[더큐브 그룹] 채용 세미나 신청</h1>
-            <p>분양상담사, 직접 경험하고 결정하세요!</p>
+            <h1>[더큐브 그룹] 분양상담사 채용 세미나란? 💼</h1>
+            <p>성공적인 커리어의 첫 걸음, 더큐브 그룹과 함께하세요.</p>
         </div>
         <div class="form-body">
-            <p class="form-description">
-                현장 분위기, 업무 방식, 실제 상담 흐름까지! 정식 입사 전, 직업을 직접 체험해볼 수 있는 특별한 기회입니다.<br>
-                성과 중심의 문화 속에서 <strong>월 1천만 원 이상의 보상</strong>도 가능한 구조를 직접 확인해보세요.
-            </p>
-            <form action="#" method="post">
+            <div class="form-description">
+                 <p>🤝 <strong>정식 입사 전에 분양상담사라는 직업을 직접 체험해볼 수 있는 자리예요.</strong></p>
+                <p>✨ 현장 분위기, 업무 방식, 실제 상담 흐름까지!<br>세미나를 통해 직접 보고 느껴볼 수 있는 특별한 기회입니다.</p>
+                <p>📈 더큐브 그룹은 성과 중심의 문화를 바탕으로,<br>💰 <strong>능력과 결과에 따라 월 1천만 원 이상의 보상</strong>도 가능한 구조를 운영하고 있습니다.</p>
+                <p class="highlight">📞 기재하신 정보는 담당자가 확인 후 개별 연락드릴 예정입니다.</p>
+            </div>
+            
+            <form id="seminar-form">
                 <div class="form-group">
-                    <label for="name_age">1. 성함 및 나이<span class="required-star">*</span></label>
-                    <input type="text" id="name_age" name="name_age" placeholder="예시) 홍길동 / 36" required>
+                    <label for="name_age">1. 성함 / 나이<span class="required-star">*</span></label>
+                    <input type="text" id="name_age" name="name_age" placeholder="EX) 홍길동 / 36" required>
                 </div>
                 <div class="form-group">
-                    <label for="contact">2. 연락처<span class="required-star">*</span></label>
-                    <input type="tel" id="contact" name="contact" placeholder="'-' 없이 숫자만 입력해주세요" required>
+                    <label for="contact">2. 연락 가능한 연락처<span class="required-star">*</span></label>
+                    <input type="tel" id="contact" name="contact" placeholder="EX) 01012341234" required>
                 </div>
                 <div class="form-group">
-                    <p class="question-title">3. "수억 대 연봉, 목표로 할 준비가 되셨나요?"<span class="required-star">*</span></p>
+                    <p class="question-title">3. "수억 대 연봉을 목표로 할 준비가 되셨나요?"<span class="required-star">*</span></p>
                     <div class="radio-option">
                         <label>
                             <input type="radio" name="ready_for_salary" value="yes" required> 네, 준비되어 있습니다.
@@ -153,21 +62,52 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <p class="question-title">4. 개인정보 수집 및 이용 동의<span class="required-star">*</span></p>
+                    <p class="question-title">4. 개인정보 수집 동의<span class="required-star">*</span></p>
                     <div class="privacy-info">
-                        <strong>- 수집항목:</strong> 성함, 나이, 연락처<br>
-                        <strong>- 수집 및 이용 목적:</strong> 채용 세미나 안내 및 진행<br>
-                        <strong>- 보유 및 이용기간:</strong> 세미나 종료 후 1개월 이내 파기
+                        <strong>수집항목:</strong> 개인정보 항목(성함, 연락처)<br>
+                        <strong>수집 및 이용 목적:</strong> 입사 지원서<br>
+                        <strong>보유 및 이용기간:</strong> 입사지원서 확인 후 폐기
                     </div>
                     <div class="radio-option">
                         <label>
-                            <input type="radio" name="privacy_agree" value="agree" required> 위 내용에 동의합니다.
+                            <input type="radio" name="privacy_agree" value="agree" required> 동의합니다.
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="submit-btn">세미나 신청하기</button>
+                <button type="submit" class="submit-btn" id="submit-button">세미나 신청하고 기회 잡기</button>
             </form>
         </div>
     </div>
+
+    <script>
+        const form = document.getElementById('seminar-form');
+        const submitButton = document.getElementById('submit-button');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // 폼의 기본 제출 동작을 막습니다.
+
+            // 제공해주신 URL을 적용했습니다.
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxObtv5iscYm5G93HAY0JU3V8wFwUgq3lhC3XyRIHI4JT3gayeHChdYm4VH5rxeDE4s/exec';
+            
+            submitButton.disabled = true;
+            submitButton.textContent = '제출 중...';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    console.log('Success!', response);
+                    alert('신청이 성공적으로 완료되었습니다! 담당자가 곧 연락드릴 예정입니다.');
+                    form.reset(); // 폼 초기화
+                    submitButton.disabled = false;
+                    submitButton.textContent = '세미나 신청하고 기회 잡기';
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = '세미나 신청하고 기회 잡기';
+                });
+        });
+    </script>
+
 </body>
 </html>
