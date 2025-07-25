@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[더큐브 그룹] 분양상담사 채용 세미나</title>
+    <title>[더큐브그룹] 분양상담사 신규 채용 안내</title>
     <style>
         /* CSS 스타일은 이전과 동일합니다. */
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
@@ -33,13 +33,13 @@
 <body>
     <div class="form-wrapper">
         <div class="form-header">
-            <h1>[더큐브 그룹] 분양상담사 채용 세미나란? 💼</h1>
-            <p>성공적인 커리어의 첫 걸음, 더큐브 그룹과 함께하세요.</p>
+            <h1>[더큐브그룹] 분양상담사 신규 채용 안내 💼</h1>
+            <p>성공적인 커리어의 첫 걸음, 더큐브그룹과 함께하세요.</p>
         </div>
         <div class="form-body">
             <div class="form-description">
-                 <p>🤝 <strong>정식 입사 전에 분양상담사라는 직업을 직접 체험해볼 수 있는 자리예요.</strong></p>
-                <p>✨ 현장 분위기, 업무 방식, 실제 상담 흐름까지!<br>세미나를 통해 직접 보고 느껴볼 수 있는 특별한 기회입니다.</p>
+                 <p>🤝 <strong>지금 바로 분양상담사에 정식 지원하실 수 있는 기회입니다.</strong></p>
+                <p>✨ 체계적인 교육 시스템과 실무 중심의 OJT를 통해<br>누구나 전문가로 성장할 수 있는 최고의 환경을 제공합니다.</p>
                 <p>📈 더큐브 그룹은 성과 중심의 문화를 바탕으로,<br>💰 <strong>능력과 결과에 따라 월 1천만 원 이상의 보상</strong>도 가능한 구조를 운영하고 있습니다.</p>
                 <p class="highlight">📞 기재하신 정보는 담당자가 확인 후 개별 연락드릴 예정입니다.</p>
             </div>
@@ -74,7 +74,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="submit-btn" id="submit-button">세미나 신청하고 기회 잡기</button>
+                <button type="submit" class="submit-btn" id="submit-button">입사 지원하고 기회 잡기</button>
             </form>
         </div>
     </div>
@@ -95,16 +95,16 @@
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                     console.log('Success!', response);
-                    alert('신청이 성공적으로 완료되었습니다! 담당자가 곧 연락드릴 예정입니다.');
+                    alert('지원이 성공적으로 완료되었습니다! 담당자가 곧 연락드릴 예정입니다.');
                     form.reset(); // 폼 초기화
                     submitButton.disabled = false;
-                    submitButton.textContent = '세미나 신청하고 기회 잡기';
+                    submitButton.textContent = '입사 지원하고 기회 잡기';
                 })
                 .catch(error => {
                     console.error('Error!', error.message);
                     alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
                     submitButton.disabled = false;
-                    submitButton.textContent = '세미나 신청하고 기회 잡기';
+                    submitButton.textContent = '입사 지원하고 기회 잡기';
                 });
         });
     </script>
