@@ -1,236 +1,54 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[더큐브그룹] 분양상담사 신규 채용 안내</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <style>
-        body {
-            font-family: 'Pretendard', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #4F46E5 0%, #0EA5E9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .form-input:focus {
-            border-color: #4F46E5;
-            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
-            outline: none;
-        }
-        .submit-btn {
-            background: linear-gradient(135deg, #4F46E5 0%, #0EA5E9 100%);
-            transition: all 0.3s ease;
-        }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(79, 70, 229, 0.5);
-        }
-        .submit-btn:disabled {
-            background: #9CA3AF;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        .radio-custom:checked {
-            background-color: #4F46E5;
-            border-color: #4F46E5;
-        }
-        .radio-custom:checked::after {
-            content: '';
-            display: block;
-            width: 8px;
-            height: 8px;
-            background-color: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .radio-label {
-            transition: color 0.2s;
-        }
-        input[type="radio"]:checked + .radio-label {
-            color: #4F46E5;
-        }
-    </style>
-</head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-
-    <div class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden lg:grid lg:grid-cols-2">
-        
-        <!-- Left Side: Information -->
-        <div class="relative bg-gray-800 p-8 sm:p-12 text-white flex flex-col justify-between">
-            <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x800/1F2937/FFFFFF?text=The+Cube+Group';"
-                     alt="팀원들이 협업하는 이미지" class="w-full h-full object-cover opacity-20">
-            </div>
-            <div class="relative z-10">
-                <img src="logo.png" alt="더큐브그룹 로고" class="h-10 sm:h-12 mb-8">
-                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
-                    <span class="gradient-text">성공의 기회</span>가<br>
-                    당신을 기다립니다.
-                </h1>
-                <p class="mt-4 text-gray-300 text-lg">더큐브그룹과 함께라면, 당신의 잠재력은 현실이 됩니다.</p>
-            </div>
-            <div class="relative z-10 mt-12 space-y-8">
-                <div class="flex items-start">
-                    <svg class="w-8 h-8 text-indigo-400 flex-shrink-0 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    <div>
-                        <h3 class="font-bold text-xl">체계적인 교육</h3>
-                        <p class="text-gray-300 mt-1">전문가로 성장할 수 있는 체계적인 교육과 OJT를 제공합니다.</p>
-                    </div>
-                </div>
-                <div class="flex items-start">
-                    <svg class="w-8 h-8 text-indigo-400 flex-shrink-0 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
-                    <div>
-                        <h3 class="font-bold text-xl">성과 기반 보상</h3>
-                        <p class="text-gray-300 mt-1">능력과 결과에 따라 월 1천만 원 이상의 높은 수익이 가능합니다.</p>
-                    </div>
-                </div>
-                <div class="flex items-start">
-                     <svg class="w-8 h-8 text-indigo-400 flex-shrink-0 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    <div>
-                        <h3 class="font-bold text-xl">성장하는 문화</h3>
-                        <p class="text-gray-300 mt-1">동료와 함께 성장하며 최고의 전문가로 거듭날 수 있습니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Side: Form -->
-        <div class="p-8 sm:p-12 flex flex-col justify-center">
-            <div class="w-full">
-                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">분양상담사 신규채용</h2>
-                <p class="mt-2 text-gray-600">아래 정보를 입력해주시면 담당자가 확인 후 빠르게 연락드리겠습니다.</p>
-            </div>
-
-            <form id="application-form" class="mt-8 space-y-6">
-                <div>
-                    <label for="name_age" class="text-sm font-bold text-gray-700">1. 성함 / 나이 <span class="text-red-500">*</span></label>
-                    <input type="text" id="name_age" name="name_age" placeholder="예) 홍길동 / 36" required
-                           class="form-input mt-2 block w-full px-4 py-3 bg-gray-100 border-gray-200 border-2 rounded-lg text-base transition duration-300">
-                </div>
-
-                <div>
-                    <label for="contact" class="text-sm font-bold text-gray-700">2. 연락처 <span class="text-red-500">*</span></label>
-                    <input type="tel" id="contact" name="contact" placeholder="'-' 없이 숫자만 입력" required
-                           class="form-input mt-2 block w-full px-4 py-3 bg-gray-100 border-gray-200 border-2 rounded-lg text-base transition duration-300">
-                </div>
-
-                <div>
-                    <p class="text-sm font-bold text-gray-700">3. "수억 대 연봉을 목표로 할 준비가 되셨나요?" <span class="text-red-500">*</span></p>
-                    <div class="mt-3 bg-gray-100 rounded-lg p-4">
-                        <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="ready_for_salary" value="yes" required class="hidden">
-                            <span class="relative w-5 h-5 border-2 border-gray-300 rounded-full mr-3 radio-custom transition"></span>
-                            <span class="text-gray-800 font-medium radio-label">네, 준비되어 있습니다.</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <p class="text-sm font-bold text-gray-700">4. 개인정보 수집 동의 <span class="text-red-500">*</span></p>
-                    <div class="mt-2 text-xs text-gray-500 bg-gray-100 p-3 rounded-lg border border-gray-200">
-                        <strong>수집항목:</strong> 성함, 나이, 연락처<br>
-                        <strong>수집 및 이용 목적:</strong> 채용 지원 및 결과 안내<br>
-                        <strong>보유 및 이용기간:</strong> 채용 절차 종료 후 즉시 파기
-                    </div>
-                    <div class="mt-3 bg-gray-100 rounded-lg p-4">
-                         <label class="flex items-center cursor-pointer">
-                            <input type="radio" name="privacy_agree" value="agree" required class="hidden">
-                            <span class="relative w-5 h-5 border-2 border-gray-300 rounded-full mr-3 radio-custom transition"></span>
-                            <span class="text-gray-800 font-medium radio-label">개인정보 수집 및 이용에 동의합니다.</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <button type="submit" id="submit-button" class="submit-btn w-full text-white font-bold py-4 px-4 rounded-lg text-lg">
-                        입사 지원하고 기회 잡기
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <!-- Modal -->
-    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full text-center">
-            <div id="modal-icon" class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center">
-                <!-- Icon will be inserted here by JS -->
-            </div>
-            <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
-            <p id="modal-message" class="mt-2 text-gray-600"></p>
-            <button id="modal-close" class="mt-6 w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-700 transition">
-                확인
-            </button>
-        </div>
-    </div>
-
-    <script>
-        const form = document.getElementById('application-form');
-        const submitButton = document.getElementById('submit-button');
-        const modal = document.getElementById('modal');
-        const modalClose = document.getElementById('modal-close');
-        const modalIcon = document.getElementById('modal-icon');
-        const modalTitle = document.getElementById('modal-title');
-        const modalMessage = document.getElementById('modal-message');
-
-        function showModal(type, title, message) {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            modalTitle.textContent = title;
-            modalMessage.textContent = message;
-
-            if (type === 'success') {
-                modalIcon.innerHTML = `<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
-                modalIcon.className = 'mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-green-500';
-            } else {
-                modalIcon.innerHTML = `<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
-                modalIcon.className = 'mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-red-500';
-            }
-        }
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        });
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxObtv5iscYm5G93HAY0JU3V8wFwUgq3lhC3XyRIHI4JT3gayeHChdYm4VH5rxeDE4s/exec';
-            
-            submitButton.disabled = true;
-            submitButton.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                제출 중...
-            `;
-
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    console.log('Success!', response);
-                    showModal('success', '지원 완료!', '지원이 성공적으로 완료되었습니다. 담당자가 곧 연락드릴 예정입니다.');
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    showModal('error', '오류 발생', '오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-                })
-                .finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.textContent = '입사 지원하고 기회 잡기';
-                });
-        });
-    </script>
-
-</body>
-</html>
+<style>
+    body {
+        font-family: 'Pretendard', sans-serif;
+    }
+    .gradient-text {
+        background: linear-gradient(135deg, #4F46E5 0%, #0EA5E9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .form-input:focus {
+        border-color: #4F46E5;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+        outline: none;
+    }
+    .submit-btn {
+        background: linear-gradient(135deg, #4F46E5 0%, #0EA5E9 100%);
+        transition: all 0.3s ease;
+    }
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -10px rgba(79, 70, 229, 0.5);
+    }
+    .submit-btn:disabled {
+        background: #9CA3AF;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+    /* ▼▼▼▼▼ 여기부터 수정된 부분 ▼▼▼▼▼ */
+    input[type="radio"]:checked + .radio-custom {
+        background-color: #4F46E5;
+        border-color: #4F46E5;
+    }
+    input[type="radio"]:checked + .radio-custom::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .radio-label {
+        transition: color 0.2s;
+    }
+    /* E label이 바로 뒤에 오지 않으므로 일반 형제 선택자(~) 사용 */
+    input[type="radio"]:checked ~ .radio-label {
+        color: #4F46E5;
+    }
+    /* ▲▲▲▲▲ 여기까지 수정된 부분 ▲▲▲▲▲ */
+</style>
